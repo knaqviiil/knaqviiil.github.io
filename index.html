@@ -1,457 +1,1195 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Innovation Portfolio — Kamran Naqvi | Ismail Industries</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --navy:#071b3a;
-    --navy2:#0d2f61;
-    --blue:#1457ff;
-    --cyan:#10c7e8;
-    --sky:#eaf3ff;
-    --ink:#0a1730;
-    --text:#1b2c48;
-    --muted:#60708b;
-    --line:#d8e3f4;
-    --panel:#ffffff;
-    --soft:#f5f9ff;
-    --green:#18a76a;
-    --amber:#d48813;
-    --purple:#7357ff;
-    --shadow:0 22px 60px rgba(15,47,95,.16);
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Innovation Portfolio — Kamran Naqvi | Ismail Industries</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --navy: #071b3a;
+      --navy2: #0d2f61;
+      --blue: #1457ff;
+      --cyan: #10c7e8;
+      --sky: #eaf3ff;
+      --ink: #0a1730;
+      --text: #1b2c48;
+      --muted: #60708b;
+      --line: #d8e3f4;
+      --panel: #ffffff;
+      --soft: #f5f9ff;
+      --green: #18a76a;
+      --amber: #d48813;
+      --purple: #7357ff;
+      --shadow: 0 22px 60px rgba(15, 47, 95, .16);
+    }
 
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{
-    font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-    background:linear-gradient(180deg,#f4f8ff 0%,#ffffff 44%,#f4f8ff 100%);
-    color:var(--text);
-    line-height:1.55;
-    -webkit-font-smoothing:antialiased;
-  }
-  a{color:inherit}
-  .wrap{width:min(1360px,calc(100% - 56px));margin:0 auto}
-  .eyebrow{font-size:.75rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan)}
-  .section-title{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:24px}
-  .section-title h2{font-size:clamp(1.7rem,2.2vw,2.45rem);letter-spacing:-.04em;color:var(--ink);line-height:1.08}
-  .section-title p{max-width:650px;color:var(--muted);font-size:.98rem}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
 
-  /* Header */
-  .topbar{
-    position:sticky;top:0;z-index:30;
-    background:rgba(7,27,58,.92);
-    backdrop-filter:blur(16px);
-    border-bottom:1px solid rgba(255,255,255,.12);
-    color:#fff;
-  }
-  .topbar .inner{height:72px;display:flex;align-items:center;justify-content:space-between;gap:18px}
-  .brand{display:flex;align-items:center;gap:14px}
-  .seal{width:44px;height:44px;border-radius:14px;background:linear-gradient(135deg,var(--blue),var(--cyan));display:grid;place-items:center;font-weight:900;box-shadow:0 12px 28px rgba(16,199,232,.24)}
-  .brand small{display:block;color:#b8c9e6;font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
-  .brand strong{display:block;font-size:1rem;letter-spacing:-.02em}
-  .nav-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end}
-  .pill{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:9px 13px;color:#dce8ff;font-size:.78rem;font-weight:700;background:rgba(255,255,255,.06)}
-  .print-btn{border:0;border-radius:999px;padding:10px 16px;font-weight:900;color:var(--navy);background:#fff;cursor:pointer;box-shadow:0 10px 22px rgba(0,0,0,.16)}
+    html {
+      scroll-behavior: smooth
+    }
 
-  /* Hero */
-  .hero{
-    background:
-      radial-gradient(circle at 18% 0%,rgba(16,199,232,.34),transparent 32%),
-      radial-gradient(circle at 90% 8%,rgba(20,87,255,.38),transparent 34%),
-      linear-gradient(135deg,#061632 0%,#0b2d61 52%,#123f82 100%);
-    color:#fff;
-    overflow:hidden;
-  }
-  .hero .wrap{padding:70px 0 46px;position:relative}
-  .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:34px;align-items:stretch}
-  .hero-card{position:relative;z-index:1}
-  .hero h1{font-size:clamp(2.8rem,5vw,5.6rem);line-height:.94;letter-spacing:-.065em;margin:18px 0 22px;max-width:950px}
-  .hero h1 span{background:linear-gradient(90deg,#fff,#b8f5ff);-webkit-background-clip:text;background-clip:text;color:transparent}
-  .lead{font-size:1.12rem;color:#d7e7ff;max-width:860px}
-  .lead b{color:#fff}
-  .hero-meta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-  .hero-meta .badge{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);border-radius:16px;padding:14px 16px;min-width:180px}
-  .badge span{display:block;color:#a9c8ff;font-size:.74rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em}
-  .badge strong{display:block;margin-top:5px;font-size:1.02rem;color:#fff}
+    body {
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: linear-gradient(180deg, #f4f8ff 0%, #ffffff 44%, #f4f8ff 100%);
+      color: var(--text);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
 
-  .profile-panel{
-    background:rgba(255,255,255,.1);
-    border:1px solid rgba(255,255,255,.16);
-    border-radius:30px;
-    padding:26px;
-    box-shadow:0 28px 90px rgba(0,0,0,.22);
-    backdrop-filter:blur(18px);
-    display:flex;flex-direction:column;justify-content:space-between;min-height:430px;
-  }
-  .profile-top{display:flex;align-items:center;gap:16px}
-  .avatar{width:84px;height:84px;border-radius:26px;background:linear-gradient(135deg,#fff,#9ff4ff);display:grid;place-items:center;color:var(--navy);font-size:1.7rem;font-weight:900;box-shadow:0 16px 32px rgba(0,0,0,.2)}
-  .profile-top h3{font-size:1.45rem;letter-spacing:-.04em;margin-bottom:4px}
-  .profile-top p{color:#c9dbf6;font-size:.95rem}
-  .statement{font-size:1.22rem;line-height:1.35;font-weight:800;letter-spacing:-.035em;color:#fff;margin:34px 0}
-  .mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-  .mini-grid div{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.13);border-radius:18px;padding:14px}
-  .mini-grid b{display:block;font-size:1.55rem;line-height:1;color:#fff}
-  .mini-grid span{display:block;margin-top:7px;color:#bad2f3;font-size:.76rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em}
+    a {
+      color: inherit
+    }
 
-  .stats-bar{margin-top:40px;display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
-  .stat{background:#fff;color:var(--ink);border-radius:22px;padding:22px;border:1px solid rgba(216,227,244,.9);box-shadow:var(--shadow)}
-  .stat strong{display:block;font-size:2.45rem;line-height:1;letter-spacing:-.06em;color:var(--navy)}
-  .stat span{display:block;margin-top:8px;color:var(--muted);font-size:.76rem;font-weight:900;text-transform:uppercase;letter-spacing:.09em}
+    .wrap {
+      width: min(1360px, calc(100% - 56px));
+      margin: 0 auto
+    }
 
-  /* Sections */
-  main{padding:54px 0 80px}
-  section.block{margin-top:40px}
-  .executive-summary{display:grid;grid-template-columns:1.05fr .95fr;gap:20px}
-  .summary-card,.team-card,.tech-card,.impact-card,.portfolio-card{
-    background:var(--panel);border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow)
-  }
-  .summary-card{padding:30px}
-  .summary-card h2{font-size:2rem;line-height:1.05;letter-spacing:-.05em;color:var(--ink);margin:12px 0 16px}
-  .summary-card p{color:#394b66;margin-bottom:16px;font-size:1rem}
-  .focus-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:22px}
-  .focus{padding:16px;border-radius:18px;background:var(--soft);border:1px solid var(--line)}
-  .focus b{display:block;color:var(--ink);font-size:.95rem;margin-bottom:4px}
-  .focus span{color:var(--muted);font-size:.88rem}
+    .eyebrow {
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--cyan)
+    }
 
-  .team-card{padding:28px;background:linear-gradient(180deg,#ffffff,#f7fbff)}
-  .team-card h3{font-size:1.35rem;letter-spacing:-.04em;color:var(--ink);margin-bottom:18px}
-  .resource-list{display:grid;gap:10px}
-  .resource{display:flex;align-items:center;justify-content:space-between;gap:14px;border:1px solid var(--line);border-radius:18px;padding:15px 16px;background:#fff}
-  .resource span{font-weight:800;color:var(--ink)}
-  .resource b{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--blue),var(--cyan));display:grid;place-items:center;color:#fff;font-size:1.05rem;box-shadow:0 10px 20px rgba(20,87,255,.18)}
-  .team-note{margin-top:16px;padding:16px;border-radius:18px;background:#ecf6ff;color:#3c5576;font-size:.94rem;border:1px solid #d3e9ff}
+    .section-title {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 24px
+    }
 
-  .tech-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-  .tech-card{padding:22px;min-height:160px}
-  .tech-card .icon{width:44px;height:44px;border-radius:15px;display:grid;place-items:center;background:var(--sky);color:var(--blue);font-weight:900;margin-bottom:16px}
-  .tech-card h3{font-size:1.04rem;letter-spacing:-.03em;color:var(--ink);margin-bottom:10px}
-  .tech-card p{font-size:.9rem;color:var(--muted)}
+    .section-title h2 {
+      font-size: clamp(1.7rem, 2.2vw, 2.45rem);
+      letter-spacing: -.04em;
+      color: var(--ink);
+      line-height: 1.08
+    }
 
-  .portfolio-shell{background:#fff;border:1px solid var(--line);border-radius:34px;box-shadow:var(--shadow);overflow:hidden}
-  .portfolio-head{padding:30px 32px;background:linear-gradient(135deg,#0b2d61,#174da0);color:#fff;display:flex;align-items:flex-end;justify-content:space-between;gap:18px}
-  .portfolio-head h2{font-size:2rem;letter-spacing:-.05em;line-height:1.05;margin-top:8px}
-  .portfolio-head p{color:#d6e8ff;max-width:720px;font-size:.98rem}
-  .portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line)}
-  .portfolio-card{border-radius:0;box-shadow:none;border:0;border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:26px;min-height:285px}
-  .portfolio-card:nth-child(3n){border-right:0}
-  .domain-label{display:inline-flex;align-items:center;gap:8px;padding:7px 11px;border-radius:999px;background:#eef6ff;color:var(--blue);font-weight:900;font-size:.72rem;text-transform:uppercase;letter-spacing:.09em;margin-bottom:16px}
-  .portfolio-card h3{font-size:1.28rem;color:var(--ink);letter-spacing:-.04em;margin-bottom:10px}
-  .portfolio-card p{color:#52647e;font-size:.94rem;margin-bottom:16px}
-  .systems{display:flex;flex-wrap:wrap;gap:8px}
-  .system-chip{font-size:.72rem;font-weight:800;color:#223653;background:#f6f9ff;border:1px solid #dce7f7;border-radius:999px;padding:7px 9px}
-  .system-chip.dev{color:#8a5a00;background:#fff8e8;border-color:#ffe1a6}
-  .system-chip.sun{color:#667085;background:#f4f5f7;border-color:#e1e4ea}
+    .section-title p {
+      max-width: 650px;
+      color: var(--muted);
+      font-size: .98rem
+    }
 
-  .impact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-  .impact-card{padding:24px;background:linear-gradient(180deg,#ffffff,#f8fbff)}
-  .impact-card b{display:block;color:var(--blue);font-size:.74rem;text-transform:uppercase;letter-spacing:.12em;margin-bottom:10px}
-  .impact-card h3{font-size:1.1rem;letter-spacing:-.04em;color:var(--ink);margin-bottom:8px}
-  .impact-card p{font-size:.9rem;color:var(--muted)}
+    /* Header */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      background: rgba(7, 27, 58, .92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, .12);
+      color: #fff;
+    }
 
-  .roadmap{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-  .road-card{border-radius:28px;padding:26px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
-  .road-card:after{content:"";position:absolute;width:240px;height:240px;border-radius:50%;right:-90px;top:-100px;background:rgba(255,255,255,.14)}
-  .road-card.blue{background:linear-gradient(135deg,#1457ff,#0ba9d8)}
-  .road-card.dark{background:linear-gradient(135deg,#071b3a,#143f83)}
-  .road-card h3{font-size:1.35rem;letter-spacing:-.04em;margin-bottom:8px;position:relative;z-index:1}
-  .road-card p{color:#dfeeff;position:relative;z-index:1}
-  .road-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;position:relative;z-index:1}
-  .road-list span{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:8px 10px;font-weight:800;font-size:.78rem}
+    .topbar .inner {
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px
+    }
 
-  footer{background:#061632;color:#b9cbea;padding:34px 0;border-top:1px solid rgba(255,255,255,.1)}
-  .foot{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:.86rem}
-  .foot strong{color:#fff}
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px
+    }
 
-  @media(max-width:1100px){
-    .hero-grid,.executive-summary,.roadmap{grid-template-columns:1fr}
-    .stats-bar,.impact-grid{grid-template-columns:repeat(2,1fr)}
-    .tech-grid{grid-template-columns:repeat(2,1fr)}
-    .portfolio-grid{grid-template-columns:repeat(2,1fr)}
-    .portfolio-card:nth-child(3n){border-right:1px solid var(--line)}
-    .portfolio-card:nth-child(2n){border-right:0}
-  }
-  @media(max-width:700px){
-    .wrap{width:min(100% - 32px,1360px)}
-    .topbar{position:static}
-    .topbar .inner{height:auto;padding:16px 0;align-items:flex-start;flex-direction:column}
-    .hero .wrap{padding:44px 0 34px}
-    .hero h1{font-size:2.6rem}
-    .profile-panel{min-height:auto}
-    .stats-bar,.focus-list,.tech-grid,.portfolio-grid,.impact-grid{grid-template-columns:1fr}
-    .portfolio-card{border-right:0!important}
-    .portfolio-head,.section-title{display:block}
-    .section-title p{margin-top:10px}
-    .print-btn{display:none}
-  }
+    .seal {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--blue), var(--cyan));
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      box-shadow: 0 12px 28px rgba(16, 199, 232, .24)
+    }
 
-  @media print{
-    .topbar{position:static;background:#061632!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-    .print-btn{display:none}
-    body{background:#fff}
-    .hero,.portfolio-head,footer,.road-card{break-inside:avoid;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-    .portfolio-card,.summary-card,.team-card,.tech-card,.impact-card{box-shadow:none;break-inside:avoid}
-    .wrap{width:94%}
-  }
-</style>
+    .brand small {
+      display: block;
+      color: #b8c9e6;
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase
+    }
+
+    .brand strong {
+      display: block;
+      font-size: 1rem;
+      letter-spacing: -.02em
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(255, 255, 255, .18);
+      border-radius: 999px;
+      padding: 9px 13px;
+      color: #dce8ff;
+      font-size: .78rem;
+      font-weight: 700;
+      background: rgba(255, 255, 255, .06)
+    }
+
+    .print-btn {
+      border: 0;
+      border-radius: 999px;
+      padding: 10px 16px;
+      font-weight: 900;
+      color: var(--navy);
+      background: #fff;
+      cursor: pointer;
+      box-shadow: 0 10px 22px rgba(0, 0, 0, .16)
+    }
+
+    /* Hero */
+    .hero {
+      background:
+        radial-gradient(circle at 18% 0%, rgba(16, 199, 232, .34), transparent 32%),
+        radial-gradient(circle at 90% 8%, rgba(20, 87, 255, .38), transparent 34%),
+        linear-gradient(135deg, #061632 0%, #0b2d61 52%, #123f82 100%);
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .hero .wrap {
+      padding: 70px 0 46px;
+      position: relative
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: 34px;
+      align-items: stretch
+    }
+
+    .hero-card {
+      position: relative;
+      z-index: 1
+    }
+
+    .hero h1 {
+      font-size: clamp(2.8rem, 5vw, 5.6rem);
+      line-height: .94;
+      letter-spacing: -.065em;
+      margin: 18px 0 22px;
+      max-width: 950px
+    }
+
+    .hero h1 span {
+      background: linear-gradient(90deg, #fff, #b8f5ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent
+    }
+
+    .lead {
+      font-size: 1.12rem;
+      color: #d7e7ff;
+      max-width: 860px
+    }
+
+    .lead b {
+      color: #fff
+    }
+
+    .hero-meta {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 28px
+    }
+
+    .hero-meta .badge {
+      background: rgba(255, 255, 255, .1);
+      border: 1px solid rgba(255, 255, 255, .16);
+      border-radius: 16px;
+      padding: 14px 16px;
+      min-width: 180px
+    }
+
+    .badge span {
+      display: block;
+      color: #a9c8ff;
+      font-size: .74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .12em
+    }
+
+    .badge strong {
+      display: block;
+      margin-top: 5px;
+      font-size: 1.02rem;
+      color: #fff
+    }
+
+    .profile-panel {
+      background: rgba(255, 255, 255, .1);
+      border: 1px solid rgba(255, 255, 255, .16);
+      border-radius: 30px;
+      padding: 26px;
+      box-shadow: 0 28px 90px rgba(0, 0, 0, .22);
+      backdrop-filter: blur(18px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 430px;
+    }
+
+    .profile-top {
+      display: flex;
+      align-items: center;
+      gap: 16px
+    }
+
+    .avatar {
+      width: 84px;
+      height: 84px;
+      border-radius: 26px;
+      background: linear-gradient(135deg, #fff, #9ff4ff);
+      display: grid;
+      place-items: center;
+      color: var(--navy);
+      font-size: 1.7rem;
+      font-weight: 900;
+      box-shadow: 0 16px 32px rgba(0, 0, 0, .2)
+    }
+
+    .profile-top h3 {
+      font-size: 1.45rem;
+      letter-spacing: -.04em;
+      margin-bottom: 4px
+    }
+
+    .profile-top p {
+      color: #c9dbf6;
+      font-size: .95rem
+    }
+
+    .statement {
+      font-size: 1.22rem;
+      line-height: 1.35;
+      font-weight: 800;
+      letter-spacing: -.035em;
+      color: #fff;
+      margin: 34px 0
+    }
+
+    .mini-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px
+    }
+
+    .mini-grid div {
+      background: rgba(255, 255, 255, .09);
+      border: 1px solid rgba(255, 255, 255, .13);
+      border-radius: 18px;
+      padding: 14px
+    }
+
+    .mini-grid b {
+      display: block;
+      font-size: 1.55rem;
+      line-height: 1;
+      color: #fff
+    }
+
+    .mini-grid span {
+      display: block;
+      margin-top: 7px;
+      color: #bad2f3;
+      font-size: .76rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .1em
+    }
+
+    .stats-bar {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px
+    }
+
+    .stat {
+      background: #fff;
+      color: var(--ink);
+      border-radius: 22px;
+      padding: 22px;
+      border: 1px solid rgba(216, 227, 244, .9);
+      box-shadow: var(--shadow)
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 2.45rem;
+      line-height: 1;
+      letter-spacing: -.06em;
+      color: var(--navy)
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: .76rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .09em
+    }
+
+    /* Sections */
+    main {
+      padding: 54px 0 80px
+    }
+
+    section.block {
+      margin-top: 40px
+    }
+
+    .executive-summary {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 20px
+    }
+
+    .summary-card,
+    .team-card,
+    .tech-card,
+    .impact-card,
+    .portfolio-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      box-shadow: var(--shadow)
+    }
+
+    .summary-card {
+      padding: 30px
+    }
+
+    .summary-card h2 {
+      font-size: 2rem;
+      line-height: 1.05;
+      letter-spacing: -.05em;
+      color: var(--ink);
+      margin: 12px 0 16px
+    }
+
+    .summary-card p {
+      color: #394b66;
+      margin-bottom: 16px;
+      font-size: 1rem
+    }
+
+    .focus-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 22px
+    }
+
+    .focus {
+      padding: 16px;
+      border-radius: 18px;
+      background: var(--soft);
+      border: 1px solid var(--line)
+    }
+
+    .focus b {
+      display: block;
+      color: var(--ink);
+      font-size: .95rem;
+      margin-bottom: 4px
+    }
+
+    .focus span {
+      color: var(--muted);
+      font-size: .88rem
+    }
+
+    .team-card {
+      padding: 28px;
+      background: linear-gradient(180deg, #ffffff, #f7fbff)
+    }
+
+    .team-card h3 {
+      font-size: 1.35rem;
+      letter-spacing: -.04em;
+      color: var(--ink);
+      margin-bottom: 18px
+    }
+
+    .resource-list {
+      display: grid;
+      gap: 10px
+    }
+
+    .resource {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 15px 16px;
+      background: #fff
+    }
+
+    .resource span {
+      font-weight: 800;
+      color: var(--ink)
+    }
+
+    .resource b {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--blue), var(--cyan));
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-size: 1.05rem;
+      box-shadow: 0 10px 20px rgba(20, 87, 255, .18)
+    }
+
+    .team-note {
+      margin-top: 16px;
+      padding: 16px;
+      border-radius: 18px;
+      background: #ecf6ff;
+      color: #3c5576;
+      font-size: .94rem;
+      border: 1px solid #d3e9ff
+    }
+
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px
+    }
+
+    .tech-card {
+      padding: 22px;
+      min-height: 160px
+    }
+
+    .tech-card .icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 15px;
+      display: grid;
+      place-items: center;
+      background: var(--sky);
+      color: var(--blue);
+      font-weight: 900;
+      margin-bottom: 16px
+    }
+
+    .tech-card h3 {
+      font-size: 1.04rem;
+      letter-spacing: -.03em;
+      color: var(--ink);
+      margin-bottom: 10px
+    }
+
+    .tech-card p {
+      font-size: .9rem;
+      color: var(--muted)
+    }
+
+    .portfolio-shell {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 34px;
+      box-shadow: var(--shadow);
+      overflow: hidden
+    }
+
+    .portfolio-head {
+      padding: 30px 32px;
+      background: linear-gradient(135deg, #0b2d61, #174da0);
+      color: #fff;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 18px
+    }
+
+    .portfolio-head h2 {
+      font-size: 2rem;
+      letter-spacing: -.05em;
+      line-height: 1.05;
+      margin-top: 8px
+    }
+
+    .portfolio-head p {
+      color: #d6e8ff;
+      max-width: 720px;
+      font-size: .98rem
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      border-top: 1px solid var(--line)
+    }
+
+    .portfolio-card {
+      border-radius: 0;
+      box-shadow: none;
+      border: 0;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 26px;
+      min-height: 285px
+    }
+
+    .portfolio-card:nth-child(3n) {
+      border-right: 0
+    }
+
+    .domain-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 11px;
+      border-radius: 999px;
+      background: #eef6ff;
+      color: var(--blue);
+      font-weight: 900;
+      font-size: .72rem;
+      text-transform: uppercase;
+      letter-spacing: .09em;
+      margin-bottom: 16px
+    }
+
+    .portfolio-card h3 {
+      font-size: 1.28rem;
+      color: var(--ink);
+      letter-spacing: -.04em;
+      margin-bottom: 10px
+    }
+
+    .portfolio-card p {
+      color: #52647e;
+      font-size: .94rem;
+      margin-bottom: 16px
+    }
+
+    .systems {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px
+    }
+
+    .system-chip {
+      font-size: .72rem;
+      font-weight: 800;
+      color: #223653;
+      background: #f6f9ff;
+      border: 1px solid #dce7f7;
+      border-radius: 999px;
+      padding: 7px 9px
+    }
+
+    .system-chip.dev {
+      color: #8a5a00;
+      background: #fff8e8;
+      border-color: #ffe1a6
+    }
+
+    .system-chip.sun {
+      color: #667085;
+      background: #f4f5f7;
+      border-color: #e1e4ea
+    }
+
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px
+    }
+
+    .impact-card {
+      padding: 24px;
+      background: linear-gradient(180deg, #ffffff, #f8fbff)
+    }
+
+    .impact-card b {
+      display: block;
+      color: var(--blue);
+      font-size: .74rem;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      margin-bottom: 10px
+    }
+
+    .impact-card h3 {
+      font-size: 1.1rem;
+      letter-spacing: -.04em;
+      color: var(--ink);
+      margin-bottom: 8px
+    }
+
+    .impact-card p {
+      font-size: .9rem;
+      color: var(--muted)
+    }
+
+    .roadmap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px
+    }
+
+    .road-card {
+      border-radius: 28px;
+      padding: 26px;
+      color: #fff;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden
+    }
+
+    .road-card:after {
+      content: "";
+      position: absolute;
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      right: -90px;
+      top: -100px;
+      background: rgba(255, 255, 255, .14)
+    }
+
+    .road-card.blue {
+      background: linear-gradient(135deg, #1457ff, #0ba9d8)
+    }
+
+    .road-card.dark {
+      background: linear-gradient(135deg, #071b3a, #143f83)
+    }
+
+    .road-card h3 {
+      font-size: 1.35rem;
+      letter-spacing: -.04em;
+      margin-bottom: 8px;
+      position: relative;
+      z-index: 1
+    }
+
+    .road-card p {
+      color: #dfeeff;
+      position: relative;
+      z-index: 1
+    }
+
+    .road-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+      position: relative;
+      z-index: 1
+    }
+
+    .road-list span {
+      background: rgba(255, 255, 255, .15);
+      border: 1px solid rgba(255, 255, 255, .22);
+      border-radius: 999px;
+      padding: 8px 10px;
+      font-weight: 800;
+      font-size: .78rem
+    }
+
+    footer {
+      background: #061632;
+      color: #b9cbea;
+      padding: 34px 0;
+      border-top: 1px solid rgba(255, 255, 255, .1)
+    }
+
+    .foot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: .86rem
+    }
+
+    .foot strong {
+      color: #fff
+    }
+
+    @media(max-width:1100px) {
+
+      .hero-grid,
+      .executive-summary,
+      .roadmap {
+        grid-template-columns: 1fr
+      }
+
+      .stats-bar,
+      .impact-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .tech-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .portfolio-card:nth-child(3n) {
+        border-right: 1px solid var(--line)
+      }
+
+      .portfolio-card:nth-child(2n) {
+        border-right: 0
+      }
+    }
+
+    @media(max-width:700px) {
+      .wrap {
+        width: min(100% - 32px, 1360px)
+      }
+
+      .topbar {
+        position: static
+      }
+
+      .topbar .inner {
+        height: auto;
+        padding: 16px 0;
+        align-items: flex-start;
+        flex-direction: column
+      }
+
+      .hero .wrap {
+        padding: 44px 0 34px
+      }
+
+      .hero h1 {
+        font-size: 2.6rem
+      }
+
+      .profile-panel {
+        min-height: auto
+      }
+
+      .stats-bar,
+      .focus-list,
+      .tech-grid,
+      .portfolio-grid,
+      .impact-grid {
+        grid-template-columns: 1fr
+      }
+
+      .portfolio-card {
+        border-right: 0 !important
+      }
+
+      .portfolio-head,
+      .section-title {
+        display: block
+      }
+
+      .section-title p {
+        margin-top: 10px
+      }
+
+      .print-btn {
+        display: none
+      }
+    }
+
+    @media print {
+      .topbar {
+        position: static;
+        background: #061632 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact
+      }
+
+      .print-btn {
+        display: none
+      }
+
+      body {
+        background: #fff
+      }
+
+      .hero,
+      .portfolio-head,
+      footer,
+      .road-card {
+        break-inside: avoid;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact
+      }
+
+      .portfolio-card,
+      .summary-card,
+      .team-card,
+      .tech-card,
+      .impact-card {
+        box-shadow: none;
+        break-inside: avoid
+      }
+
+      .wrap {
+        width: 94%
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<header class="topbar">
-  <div class="wrap inner">
-    <div class="brand">
-      <div class="seal">II</div>
-      <div>
-        <small>Ismail Industries</small>
-        <strong>Annual Innovation Portfolio</strong>
-      </div>
-    </div>
-    <div class="nav-actions">
-      <span class="pill">Kamran Naqvi</span>
-      <span class="pill">Senior Innovation Manager</span>
-      <span class="pill">Appraisal Year 2025–26</span>
-      <button class="print-btn" onclick="window.print()">Print / Save PDF</button>
-    </div>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="wrap">
-    <div class="hero-grid">
-      <div class="hero-card">
-        <p class="eyebrow">Solution Provider · Digital Transformation · Business Systems</p>
-        <h1>Building business solutions for <span>Ismail Industries</span>.</h1>
-        <p class="lead">
-          This portfolio summarizes the year’s work as <b>Senior Innovation Manager</b> — converting business problems into digital platforms across Waterverse, IIL, HR, Marketing, Supply Chain, Leadership planning, Analytics, SAP integrations and customer operations.
-        </p>
-        <div class="hero-meta">
-          <div class="badge"><span>Ownership</span><strong>Idea → Build → Adoption</strong></div>
-          <div class="badge"><span>Focus</span><strong>Automation & Analytics</strong></div>
-          <div class="badge"><span>Coverage</span><strong>Web · Mobile · BI · Bots</strong></div>
+  <header class="topbar">
+    <div class="wrap inner">
+      <div class="brand">
+        <div class="seal">II</div>
+        <div>
+          <small>Ismail Industries</small>
+          <strong>Annual Innovation Portfolio</strong>
         </div>
       </div>
+      <div class="nav-actions">
+        <span class="pill">Kamran Naqvi</span>
+        <span class="pill">Senior Innovation Manager</span>
+        <span class="pill">Appraisal Year 2025–26</span>
+        <!-- <button class="print-btn" onclick="window.print()">Print / Save PDF</button> -->
+      </div>
+    </div>
+  </header>
 
-      <aside class="profile-panel">
-        <div class="profile-top">
-          <div class="avatar">KN</div>
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-card">
+          <p class="eyebrow">Solution Provider · Digital Transformation · Business Systems</p>
+          <h1>Building business solutions for <span>Ismail Industries</span>.</h1>
+          <p class="lead">
+            This portfolio summarizes the year’s work as <b>Senior Innovation Manager</b> — converting business problems
+            into digital platforms across Waterverse, IIL, HR, Marketing, Supply Chain, Leadership planning, Analytics,
+            SAP integrations and customer operations.
+          </p>
+          <div class="hero-meta">
+            <div class="badge"><span>Ownership</span><strong>Idea → Build → Adoption</strong></div>
+            <div class="badge"><span>Focus</span><strong>Automation & Analytics</strong></div>
+            <div class="badge"><span>Coverage</span><strong>Web · Mobile · BI · Bots</strong></div>
+          </div>
+        </div>
+
+        <aside class="profile-panel">
+          <div class="profile-top">
+            <div class="avatar">KN</div>
+            <div>
+              <h3>Kamran Naqvi</h3>
+              <p>Senior Innovation Manager</p>
+            </div>
+          </div>
+          <div class="statement">
+            Delivered and managed digital solutions that improved customer onboarding, distribution visibility, online
+            payments, business intelligence, SAP connectivity, marketing campaigns and internal process automation.
+          </div>
+          <div class="mini-grid">
+            <div><b>29</b><span>Initiatives</span></div>
+            <div><b>8</b><span>Core Resources</span></div>
+            <div><b>7</b><span>Business Domains</span></div>
+            <div><b>24</b><span>Live / Delivered</span></div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat"><strong>29</strong><span>Total initiatives</span></div>
+        <div class="stat"><strong>24</strong><span>Delivered / live</span></div>
+        <div class="stat"><strong>4</strong><span>Strategic builds</span></div>
+        <div class="stat"><strong>8</strong><span>Team resources</span></div>
+        <div class="stat"><strong>7</strong><span>Domains covered</span></div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <div class="wrap">
+
+      <section class="block executive-summary">
+        <div class="summary-card">
+          <p class="eyebrow">Executive Snapshot</p>
+          <h2>From operational challenges to working platforms.</h2>
+          <p>
+            The year’s portfolio was focused on one practical objective: enable business teams with systems they can use
+            daily. Solutions were delivered across customer onboarding, distributor operations, mobile apps, commercial
+            customer servicing, payments, analytics, SAP integrations, marketing campaigns and internal workflows.
+          </p>
+          <p>
+            The approach remained consistent: understand the business process, design the workflow, coordinate with
+            stakeholders, develop the solution, integrate with required platforms, and enable adoption through
+            dashboards and operational support.
+          </p>
+          <div class="focus-list">
+            <div class="focus"><b>Customer Experience</b><span>CRM, Consumer App, Commercial App, WhatsApp BOT and
+                Customer Connect.</span></div>
+            <div class="focus"><b>Business Analytics</b><span>QlikSense dashboards, WhatsApp analytics, supply chain and
+                sales intelligence.</span></div>
+            <div class="focus"><b>Operations Enablement</b><span>DMS, distributor app, UBL commercial operations,
+                itinerary and visit planning.</span></div>
+            <div class="focus"><b>Innovation Systems</b><span>IRIS, AI-Ideas, ILMS and InnovaPM for structured idea and
+                project execution.</span></div>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <h3>Resource / Team Strength</h3>
+          <div class="resource-list">
+            <div class="resource"><span>BI Manager</span><b>1</b></div>
+            <div class="resource"><span>App Developers</span><b>2</b></div>
+            <div class="resource"><span>Web Developers</span><b>3</b></div>
+            <div class="resource"><span>SQA / Operational Support</span><b>2</b></div>
+          </div>
+          <div class="team-note">
+            A lean team delivering multi-domain solutions across web, mobile, BI, integrations, automation, support and
+            business adoption.
+          </div>
+        </div>
+      </section>
+
+      <section class="block">
+        <div class="section-title">
           <div>
-            <h3>Kamran Naqvi</h3>
-            <p>Senior Innovation Manager</p>
+            <p class="eyebrow">Technology Coverage</p>
+            <h2>Open, adaptable and business-led technology stack.</h2>
+          </div>
+          <p>Core stack used across internal platforms, mobile apps, analytics, integrations and automation — with
+            flexibility to adopt more technologies where the business need requires.</p>
+        </div>
+        <div class="tech-grid">
+          <div class="tech-card">
+            <div class="icon">01</div>
+            <h3>Backend & Data</h3>
+            <p>PHP Laravel, MySQL, MSSQL and Python for business systems, APIs, workflows and automation.</p>
+          </div>
+          <div class="tech-card">
+            <div class="icon">02</div>
+            <h3>Apps & Frontend</h3>
+            <p>Flutter, React, Android and Swift for mobile-first and responsive business applications.</p>
+          </div>
+          <div class="tech-card">
+            <div class="icon">03</div>
+            <h3>BI & Reporting</h3>
+            <p>QlikView, QlikSense, Qlik NPrinting and Power BI for dashboards, reports and management visibility.</p>
+          </div>
+          <div class="tech-card">
+            <div class="icon">04</div>
+            <h3>Integration Mindset</h3>
+            <p>Open to more technologies, platforms and tools based on business value, scalability and speed.</p>
           </div>
         </div>
-        <div class="statement">
-          Delivered and managed digital solutions that improved customer onboarding, distribution visibility, online payments, business intelligence, SAP connectivity, marketing campaigns and internal process automation.
+      </section>
+
+      <section class="block portfolio-shell">
+        <div class="portfolio-head">
+          <div>
+            <p class="eyebrow">Portfolio Ledger</p>
+            <h2>Business solutions delivered and in progress.</h2>
+          </div>
+          <p>Grouped by domain for appraisal discussion. Each card highlights the business area, key platforms, and the
+            operational value created.</p>
         </div>
-        <div class="mini-grid">
-          <div><b>29</b><span>Initiatives</span></div>
-          <div><b>8</b><span>Core Resources</span></div>
-          <div><b>7</b><span>Business Domains</span></div>
-          <div><b>24</b><span>Live / Delivered</span></div>
+
+        <div class="portfolio-grid">
+          <article class="portfolio-card">
+            <span class="domain-label">Customer Experience</span>
+            <h3>Waterverse customer lifecycle</h3>
+            <p>Solutions for call-center onboarding, consumer ordering, commercial customers and customer complaint
+              handling.</p>
+            <div class="systems">
+              <span class="system-chip">CRM</span><span class="system-chip">Consumer App</span><span
+                class="system-chip">Commercial App</span><span class="system-chip">Customer Connect</span><span
+                class="system-chip dev">Consumer BOT</span>
+            </div>
+          </article>
+
+          <article class="portfolio-card">
+            <span class="domain-label">Distribution</span>
+            <h3>Distributor and delivery operations</h3>
+            <p>Platforms improving visibility for Waterverse distributor operations and commercial customer delivery
+              execution.</p>
+            <div class="systems">
+              <span class="system-chip">DMS</span><span class="system-chip">Distributor App</span><span
+                class="system-chip">UBL Dashboard</span><span class="system-chip">UBL Delivery Operations</span>
+            </div>
+          </article>
+
+          <article class="portfolio-card">
+            <span class="domain-label">Payments & Leads</span>
+            <h3>Digital channels and growth enablement</h3>
+            <p>Managed web presence, lead integrations and enabled online payments across web, mobile and WhatsApp.</p>
+            <div class="systems">
+              <span class="system-chip">Waterverse Website</span><span class="system-chip">META Integrations</span><span
+                class="system-chip">KuickPay Payments</span>
+            </div>
+          </article>
+
+          <article class="portfolio-card">
+            <span class="domain-label">Analytics</span>
+            <h3>Management visibility and insight</h3>
+            <p>BI and reporting platforms providing dashboards, automated reports and leadership-level visibility.</p>
+            <div class="systems">
+              <span class="system-chip">WhatsApp Analytics</span><span class="system-chip">QlikSense
+                Waterverse</span><span class="system-chip">IIL Supply Chain Analytics</span><span
+                class="system-chip">IIL Sales Analytics</span>
+            </div>
+          </article>
+
+          <article class="portfolio-card">
+            <span class="domain-label">Innovation</span>
+            <h3>Idea funnel and internal innovation</h3>
+            <p>Systems to collect, manage and convert ideas into structured innovation and project execution.</p>
+            <div class="systems">
+              <span class="system-chip">IRIS</span><span class="system-chip">AI-Ideas</span><span
+                class="system-chip">ILMS</span><span class="system-chip dev">InnovaPM</span>
+            </div>
+          </article>
+
+          <article class="portfolio-card">
+            <span class="domain-label">People & HCM</span>
+            <h3>HR and leadership planning tools</h3>
+            <p>Tools for onboarding, HCM modernization and mobile-friendly planning for leadership and sales visits.</p>
+            <div class="systems">
+              <span class="system-chip">Employee Onboarding</span><span class="system-chip">HCM Revamp</span><span
+                class="system-chip">LT Visit Planner</span><span class="system-chip">Itinerary Planner</span><span
+                class="system-chip sun">Sales Market Visit</span>
+            </div>
+          </article>
+
+          <article class="portfolio-card">
+            <span class="domain-label">Marketing</span>
+            <h3>Campaign systems for brands</h3>
+            <p>Digital campaign engine supporting marketing activations for Candyland and Bisconni.</p>
+            <div class="systems">
+              <span class="system-chip">Scratch N Win</span><span class="system-chip">Candyland</span><span
+                class="system-chip">Bisconni</span>
+            </div>
+          </article>
+
+          <article class="portfolio-card">
+            <span class="domain-label">Integration</span>
+            <h3>SAP and non-SAP connectivity</h3>
+            <p>Integration bridge to streamline data flow between SAP, non-SAP systems and analytics platforms.</p>
+            <div class="systems">
+              <span class="system-chip">SAP-Bridge</span><span class="system-chip">Analytics Integration</span><span
+                class="system-chip">Non-SAP Systems</span>
+            </div>
+          </article>
+
+          <article class="portfolio-card">
+            <span class="domain-label">Operations Build</span>
+            <h3>Quality and replenishment roadmap</h3>
+            <p>Strategic builds focused on traceability, data hygiene, quality improvement and demand-based
+              replenishment.</p>
+            <div class="systems">
+              <span class="system-chip">Outlet Deduplication</span><span class="system-chip dev">Tray
+                Traceability</span><span class="system-chip dev">Demand Based Replenishment</span>
+            </div>
+          </article>
         </div>
-      </aside>
+      </section>
+
+      <section class="block">
+        <div class="section-title">
+          <div>
+            <p class="eyebrow">Business Impact</p>
+            <h2>What the portfolio improved.</h2>
+          </div>
+          <p>Focused outcomes for management discussion — not only systems built, but processes strengthened.</p>
+        </div>
+        <div class="impact-grid">
+          <div class="impact-card"><b>Customer</b>
+            <h3>Faster onboarding</h3>
+            <p>CRM and apps improved call-center and customer onboarding workflows.</p>
+          </div>
+          <div class="impact-card"><b>Operations</b>
+            <h3>Better delivery visibility</h3>
+            <p>DMS, distributor apps and UBL dashboards strengthened operational control.</p>
+          </div>
+          <div class="impact-card"><b>Finance</b>
+            <h3>Digital payments</h3>
+            <p>KuickPay enabled payment channels across web, mobile and WhatsApp.</p>
+          </div>
+          <div class="impact-card"><b>Leadership</b>
+            <h3>Actionable analytics</h3>
+            <p>Dashboards and WhatsApp reporting enabled faster management visibility.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="block roadmap">
+        <div class="road-card blue">
+          <h3>Currently in Development</h3>
+          <p>Strategic initiatives moving from build to business adoption.</p>
+          <div class="road-list">
+            <span>Tray Traceability</span><span>Demand Based Replenishment</span><span>Consumer
+              BOT</span><span>InnovaPM</span>
+          </div>
+        </div>
+        <div class="road-card dark">
+          <h3>Forward Direction</h3>
+          <p>Continue building scalable, integrated, analytics-driven systems for process automation, business
+            visibility and faster execution across Ismail Industries.</p>
+          <div class="road-list">
+            <span>Automation</span><span>AI Enablement</span><span>Data Quality</span><span>Business
+              Intelligence</span><span>Integration</span>
+          </div>
+        </div>
+      </section>
+
     </div>
+  </main>
 
-    <div class="stats-bar">
-      <div class="stat"><strong>29</strong><span>Total initiatives</span></div>
-      <div class="stat"><strong>24</strong><span>Delivered / live</span></div>
-      <div class="stat"><strong>4</strong><span>Strategic builds</span></div>
-      <div class="stat"><strong>8</strong><span>Team resources</span></div>
-      <div class="stat"><strong>7</strong><span>Domains covered</span></div>
+  <footer>
+    <div class="wrap foot">
+      <div><strong>Kamran Naqvi</strong> · Senior Innovation Manager</div>
+      <div>Ismail Industries · Annual Innovation Portfolio · Appraisal Year 2025–26</div>
     </div>
-  </div>
-</section>
-
-<main>
-  <div class="wrap">
-
-    <section class="block executive-summary">
-      <div class="summary-card">
-        <p class="eyebrow">Executive Snapshot</p>
-        <h2>From operational challenges to working platforms.</h2>
-        <p>
-          The year’s portfolio was focused on one practical objective: enable business teams with systems they can use daily. Solutions were delivered across customer onboarding, distributor operations, mobile apps, commercial customer servicing, payments, analytics, SAP integrations, marketing campaigns and internal workflows.
-        </p>
-        <p>
-          The approach remained consistent: understand the business process, design the workflow, coordinate with stakeholders, develop the solution, integrate with required platforms, and enable adoption through dashboards and operational support.
-        </p>
-        <div class="focus-list">
-          <div class="focus"><b>Customer Experience</b><span>CRM, Consumer App, Commercial App, WhatsApp BOT and Customer Connect.</span></div>
-          <div class="focus"><b>Business Analytics</b><span>QlikSense dashboards, WhatsApp analytics, supply chain and sales intelligence.</span></div>
-          <div class="focus"><b>Operations Enablement</b><span>DMS, distributor app, UBL commercial operations, itinerary and visit planning.</span></div>
-          <div class="focus"><b>Innovation Systems</b><span>IRIS, AI-Ideas, ILMS and InnovaPM for structured idea and project execution.</span></div>
-        </div>
-      </div>
-
-      <div class="team-card">
-        <h3>Resource / Team Strength</h3>
-        <div class="resource-list">
-          <div class="resource"><span>BI Manager</span><b>1</b></div>
-          <div class="resource"><span>App Developers</span><b>2</b></div>
-          <div class="resource"><span>Web Developers</span><b>3</b></div>
-          <div class="resource"><span>SQA / Operational Support</span><b>2</b></div>
-        </div>
-        <div class="team-note">
-          A lean team delivering multi-domain solutions across web, mobile, BI, integrations, automation, support and business adoption.
-        </div>
-      </div>
-    </section>
-
-    <section class="block">
-      <div class="section-title">
-        <div>
-          <p class="eyebrow">Technology Coverage</p>
-          <h2>Open, adaptable and business-led technology stack.</h2>
-        </div>
-        <p>Core stack used across internal platforms, mobile apps, analytics, integrations and automation — with flexibility to adopt more technologies where the business need requires.</p>
-      </div>
-      <div class="tech-grid">
-        <div class="tech-card"><div class="icon">01</div><h3>Backend & Data</h3><p>PHP Laravel, MySQL, MSSQL and Python for business systems, APIs, workflows and automation.</p></div>
-        <div class="tech-card"><div class="icon">02</div><h3>Apps & Frontend</h3><p>Flutter, React, Android and Swift for mobile-first and responsive business applications.</p></div>
-        <div class="tech-card"><div class="icon">03</div><h3>BI & Reporting</h3><p>QlikView, QlikSense, Qlik NPrinting and Power BI for dashboards, reports and management visibility.</p></div>
-        <div class="tech-card"><div class="icon">04</div><h3>Integration Mindset</h3><p>Open to more technologies, platforms and tools based on business value, scalability and speed.</p></div>
-      </div>
-    </section>
-
-    <section class="block portfolio-shell">
-      <div class="portfolio-head">
-        <div>
-          <p class="eyebrow">Portfolio Ledger</p>
-          <h2>Business solutions delivered and in progress.</h2>
-        </div>
-        <p>Grouped by domain for appraisal discussion. Each card highlights the business area, key platforms, and the operational value created.</p>
-      </div>
-
-      <div class="portfolio-grid">
-        <article class="portfolio-card">
-          <span class="domain-label">Customer Experience</span>
-          <h3>Waterverse customer lifecycle</h3>
-          <p>Solutions for call-center onboarding, consumer ordering, commercial customers and customer complaint handling.</p>
-          <div class="systems">
-            <span class="system-chip">CRM</span><span class="system-chip">Consumer App</span><span class="system-chip">Commercial App</span><span class="system-chip">Customer Connect</span><span class="system-chip dev">Consumer BOT</span>
-          </div>
-        </article>
-
-        <article class="portfolio-card">
-          <span class="domain-label">Distribution</span>
-          <h3>Distributor and delivery operations</h3>
-          <p>Platforms improving visibility for Waterverse distributor operations and commercial customer delivery execution.</p>
-          <div class="systems">
-            <span class="system-chip">DMS</span><span class="system-chip">Distributor App</span><span class="system-chip">UBL Dashboard</span><span class="system-chip">UBL Delivery Operations</span>
-          </div>
-        </article>
-
-        <article class="portfolio-card">
-          <span class="domain-label">Payments & Leads</span>
-          <h3>Digital channels and growth enablement</h3>
-          <p>Managed web presence, lead integrations and enabled online payments across web, mobile and WhatsApp.</p>
-          <div class="systems">
-            <span class="system-chip">Waterverse Website</span><span class="system-chip">META Integrations</span><span class="system-chip">KuickPay Payments</span>
-          </div>
-        </article>
-
-        <article class="portfolio-card">
-          <span class="domain-label">Analytics</span>
-          <h3>Management visibility and insight</h3>
-          <p>BI and reporting platforms providing dashboards, automated reports and leadership-level visibility.</p>
-          <div class="systems">
-            <span class="system-chip">WhatsApp Analytics</span><span class="system-chip">QlikSense Waterverse</span><span class="system-chip">IIL Supply Chain Analytics</span><span class="system-chip">IIL Sales Analytics</span>
-          </div>
-        </article>
-
-        <article class="portfolio-card">
-          <span class="domain-label">Innovation</span>
-          <h3>Idea funnel and internal innovation</h3>
-          <p>Systems to collect, manage and convert ideas into structured innovation and project execution.</p>
-          <div class="systems">
-            <span class="system-chip">IRIS</span><span class="system-chip">AI-Ideas</span><span class="system-chip">ILMS</span><span class="system-chip dev">InnovaPM</span>
-          </div>
-        </article>
-
-        <article class="portfolio-card">
-          <span class="domain-label">People & HCM</span>
-          <h3>HR and leadership planning tools</h3>
-          <p>Tools for onboarding, HCM modernization and mobile-friendly planning for leadership and sales visits.</p>
-          <div class="systems">
-            <span class="system-chip">Employee Onboarding</span><span class="system-chip">HCM Revamp</span><span class="system-chip">LT Visit Planner</span><span class="system-chip">Itinerary Planner</span><span class="system-chip sun">Sales Market Visit</span>
-          </div>
-        </article>
-
-        <article class="portfolio-card">
-          <span class="domain-label">Marketing</span>
-          <h3>Campaign systems for brands</h3>
-          <p>Digital campaign engine supporting marketing activations for Candyland and Bisconni.</p>
-          <div class="systems">
-            <span class="system-chip">Scratch N Win</span><span class="system-chip">Candyland</span><span class="system-chip">Bisconni</span>
-          </div>
-        </article>
-
-        <article class="portfolio-card">
-          <span class="domain-label">Integration</span>
-          <h3>SAP and non-SAP connectivity</h3>
-          <p>Integration bridge to streamline data flow between SAP, non-SAP systems and analytics platforms.</p>
-          <div class="systems">
-            <span class="system-chip">SAP-Bridge</span><span class="system-chip">Analytics Integration</span><span class="system-chip">Non-SAP Systems</span>
-          </div>
-        </article>
-
-        <article class="portfolio-card">
-          <span class="domain-label">Operations Build</span>
-          <h3>Quality and replenishment roadmap</h3>
-          <p>Strategic builds focused on traceability, data hygiene, quality improvement and demand-based replenishment.</p>
-          <div class="systems">
-            <span class="system-chip">Outlet Deduplication</span><span class="system-chip dev">Tray Traceability</span><span class="system-chip dev">Demand Based Replenishment</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="block">
-      <div class="section-title">
-        <div>
-          <p class="eyebrow">Business Impact</p>
-          <h2>What the portfolio improved.</h2>
-        </div>
-        <p>Focused outcomes for management discussion — not only systems built, but processes strengthened.</p>
-      </div>
-      <div class="impact-grid">
-        <div class="impact-card"><b>Customer</b><h3>Faster onboarding</h3><p>CRM and apps improved call-center and customer onboarding workflows.</p></div>
-        <div class="impact-card"><b>Operations</b><h3>Better delivery visibility</h3><p>DMS, distributor apps and UBL dashboards strengthened operational control.</p></div>
-        <div class="impact-card"><b>Finance</b><h3>Digital payments</h3><p>KuickPay enabled payment channels across web, mobile and WhatsApp.</p></div>
-        <div class="impact-card"><b>Leadership</b><h3>Actionable analytics</h3><p>Dashboards and WhatsApp reporting enabled faster management visibility.</p></div>
-      </div>
-    </section>
-
-    <section class="block roadmap">
-      <div class="road-card blue">
-        <h3>Currently in Development</h3>
-        <p>Strategic initiatives moving from build to business adoption.</p>
-        <div class="road-list">
-          <span>Tray Traceability</span><span>Demand Based Replenishment</span><span>Consumer BOT</span><span>InnovaPM</span>
-        </div>
-      </div>
-      <div class="road-card dark">
-        <h3>Forward Direction</h3>
-        <p>Continue building scalable, integrated, analytics-driven systems for process automation, business visibility and faster execution across Ismail Industries.</p>
-        <div class="road-list">
-          <span>Automation</span><span>AI Enablement</span><span>Data Quality</span><span>Business Intelligence</span><span>Integration</span>
-        </div>
-      </div>
-    </section>
-
-  </div>
-</main>
-
-<footer>
-  <div class="wrap foot">
-    <div><strong>Kamran Naqvi</strong> · Senior Innovation Manager</div>
-    <div>Ismail Industries · Annual Innovation Portfolio · Appraisal Year 2025–26</div>
-  </div>
-</footer>
+  </footer>
 
 </body>
+
 </html>
